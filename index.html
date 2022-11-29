@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="48x48" href="./images/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+
+  <title> E-commerce product page by @fruizotero</title>
+
+</head>
+
+<body>
+
+  <header class="header">
+
+    <div class="header__left">
+      <div class="menu">
+        <div class="menu__image">
+          <img src="images/icon-menu.svg" alt="Icon menu hamburger" class="menu__image-hamburguer">
+        </div>
+        <nav class="nav">
+          <div class="nav__content">
+            <div class="nav__close">
+              <img src="images/icon-close.svg" alt="Icon menu close" class="nav__image-close">
+            </div>
+            <div class="nav__links">
+              <a href="#" class="nav__link">Collections</a>
+              <a href="#" class="nav__link">Men</a>
+              <a href="#" class="nav__link">Women</a>
+              <a href="#" class="nav__link">About</a>
+              <a href="#" class="nav__link">Contact</a>
+            </div>
+          </div>
+
+        </nav>
+      </div>
+      <div class="logo">
+        <img src="images/logo.svg" alt="Logo of the company Snreakers" class="logo__image">
+      </div>
+    </div>
+    <div class="header__right">
+      <div class="cart">
+        <div class="cart__image">
+          <img src="images/icon-cart.svg" alt="Icon cart" class="cart__image-icon">
+        </div>
+        <span class="cart__counter">1</span>
+      </div>
+      <div class="avatar">
+        <img src="images/image-avatar.png" alt="Image avatar" class="avatar__image">
+      </div>
+    </div>
+
+  </header>
+  <main class="main">
+    <div class="cart-elements">
+      <p class="cart-elements__title">Cart</p>
+      <div class="line"></div>
+      <div class="cart-elements__list">
+
+        <p class="cart-elements__message">Your cart is empty</p>
+      </div>
+      <button class="button button-hidden button-checkout">
+        Checkout
+      </button>
+    </div>
+    <article class="product">
+      <div class="slider">
+        <div class="slider__content">
+          <div class="slider__close">
+            <img src="images/icon-close.svg" alt="Icon close" class="slider__image-close">
+          </div>
+          <div class="slider__images">
+            <!-- <img src="images/image-product-1.jpg" alt="" class="slider__image"> -->
+            <div class="button-slider button-slider--left">
+              <img src="images/icon-previous.svg" alt="Icon previous" class="button__previous">
+            </div>
+            <div class="button-slider button-slider--right">
+              <img src="images/icon-next.svg" alt="Icon next" class="button__next">
+            </div>
+
+          </div>
+          <div class="slider__thumbnails">
+            <!-- <img src="images/image-product-1-thumbnail.jpg" alt="image thumbnail product"
+              class="slider__image-thumbnail"> -->
+          </div>
+
+
+        </div>
+
+      </div>
+      <div class="images-sample">
+        <div class="images-sample__main">
+
+          <!-- <img src="images/image-product-1.jpg" alt="Image product" class="images-sample__image"> -->
+        </div>
+        <div class="images-sample__thumbnail">
+          <!-- <img src="images/image-product-1-thumbnail.jpg" alt="Image product thumbnail" class="images-sample__image-tb"> -->
+        </div>
+      </div>
+      <div class="product__details">
+        <div class="product__text">
+          <div class="product__text-titles">
+            <p class="product__subtitle">
+              Sneaker Company
+            </p>
+            <h1 class="product__title">
+              Fall Limited Edition Sneakers
+            </h1>
+          </div>
+          <p class="product__description">
+            These low-profile sneakers are your perfect casual wear companion. Featuring a
+            durable rubber outer sole, they’ll withstand everything the weather can offer.
+          </p>
+        </div>
+        <div class="prices">
+          <div class="price-discount">
+            <p class="price">$125.00</p>
+            <p class="discount">50%</p>
+          </div>
+          <p class="initial-price">$250.00</p>
+        </div>
+        <div class="amount-add">
+          <div class="amount">
+            <div class="amount__decrease">
+              <img src="images/icon-minus.svg" alt="icon minus" class="amount__image-decrease">
+            </div>
+            <span class="amount__text">
+              0
+            </span>
+            <div class="amount__increase">
+              <img src="images/icon-plus.svg" alt="icon plus" class="amount__image-increase">
+            </div>
+
+          </div>
+          <div class="button button--add">
+            <div class="button__icon">
+              <img src="images/icon-cart.svg" alt="Icon cart" class="button__image">
+            </div>
+            <p class="button__text">
+              Add to cart
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </article>
+
+  </main>
+  <template class="template-element">
+    <div class="element">
+      <div class="element__left">
+        <div class="element__figure-thumbnail">
+          <img src="images/image-product-1-thumbnail.jpg" alt="Image element" class="element__image-thumbnail">
+        </div>
+        <div class="element__details">
+          <p class="element__title">
+            Fall Limited Edition...
+          </p>
+          <div class="element__prices">
+            <span class="element__price">
+              $125.00
+            </span>
+            <span>x</span>
+            <span class="element__amount">
+              3
+            </span>
+            <span class="element__total">
+              $375.00
+            </span>
+          </div>
+
+        </div>
+      </div>
+      <div class="element__right">
+        <div class="element__remove">
+          <img src="images/icon-delete.svg" alt="icon delete" class="remove">
+        </div>
+      </div>
+    </div>
+  </template>
+  
+  <template class="template-slider__image">
+    
+      <img src="images/image-product-1.jpg" alt="" class="slider__image">
+  </template>
+  <template class="template-slider__image-thumbnail">
+    <div class="slider__figure-tb">
+      <img src="images/image-product-1-thumbnail.jpg" alt="image thumbnail product" class="slider__image-thumbnail">
+    </div>
+  </template>
+  <template class="template-images-sample__image">
+      <img src="images/image-product-1.jpg" alt="Image product" class="images-sample__image">
+  </template>
+  <template class="template-images-sample__image-tb">
+    <div class="images-sample__figure-tb">
+      <img src="images/image-product-1-thumbnail.jpg" alt="Image product thumbnail" class="images-sample__image-tb">
+
+    </div>
+  </template>
+  <script src="js/main.js" type="module"></script>
+</body>
+
+</html>
