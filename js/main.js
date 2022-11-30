@@ -69,10 +69,18 @@ d.addEventListener("DOMContentLoaded", async e => {
 
 d.addEventListener("click", e => {
 
-    console.log(e.target);
 
     const $cartElements = d.querySelector(".cart-elements");
     const $amountText = d.querySelector(".amount__text");
+
+    if (e.target.matches(".menu__image") || e.target.matches(".menu__image *")) {
+        d.querySelector(".nav").classList.add("show-menu");
+    }
+
+    if (e.target.matches(".nav__close") ||
+        e.target.matches(".nav__close *")) {
+        d.querySelector(".nav").classList.remove("show-menu");
+    }
 
     if (!(e.target.matches(".cart-elements") ||
         e.target.matches(".cart-elements *"))) {
@@ -84,11 +92,29 @@ d.addEventListener("click", e => {
         $cartElements.classList.add("show-element")
     }
 
-    if(e.target.matches(".remove")){
-        //TODO::remove element, coger data-title
-        //Eliminar del array del dom
-        //Ocultar todos los elementos de cuando se añadió un nuevo elemento solo si está vacio el cart
-        console.log(e.target.closest(".element"));
+    if (e.target.matches(".avatar") ||
+        e.target.matches(".avatar *")) {
+        d.querySelector(".avatar__image").classList.add("avatar--active")
+    }
+
+    if (!(e.target.matches(".avatar") ||
+        e.target.matches(".avatar *"))) {
+            d.querySelector(".avatar__image").classList.remove("avatar--active")
+    }
+
+    if (e.target.matches(".remove")) {
+
+        const $element = e.target.closest(".element");
+        let nameElement = $element.dataset.title;
+
+        cart = cart.filter(el => el.title !== nameElement);
+        d.querySelector(".cart-elements__list").removeChild($element);
+
+        d.querySelector(".cart-elements__list").classList.remove("cart-elements__list--start")
+        d.querySelector(".cart-elements__message").classList.remove("hidden-element");
+        d.querySelector(".cart__counter").textContent = cart.length;
+        d.querySelector(".cart__counter").classList.remove("show-element"); d.querySelector(".button-checkout").classList.add("button-hidden");
+
     }
 
     if (e.target.matches(".images-sample__figure-tb")) {
@@ -111,7 +137,7 @@ d.addEventListener("click", e => {
         $amountText.textContent = counter;
     }
 
-    if (e.target.matches(".button--add")) {
+    if (e.target.matches(".button--add") || e.target.matches(".button--add *")) {
 
         let product = {
             img: data.imagesthumbnail[0],
@@ -161,11 +187,8 @@ d.addEventListener("click", e => {
 
         }
 
-        console.log(cart);
-
         counter = 0;
         $amountText.textContent = counter;
-
     }
 
     if (e.target.matches(".button-slider--left") ||
@@ -202,6 +225,5 @@ d.addEventListener("click", e => {
 
     }
 
-
-
 });
+
